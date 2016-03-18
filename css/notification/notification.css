@@ -1,0 +1,49 @@
+.center{
+    position: relative;
+    text-align: center;
+    margin-top: 20px;
+    color: #AABAC3;
+}
+.center .fa{
+    font-size: 26px !important;
+}
+
+.divBorder{
+    border-bottom: 1px solid #D0DBE1;
+}
+
+.divStyle{
+    border-bottom: 1px solid #D0DBE1;
+    width: 344px;
+    height: 100px;
+    margin: auto;
+    background-color: #E9EFF2;
+}
+.popover{
+    top:50px !important;
+    left:510px !important;
+    text-align: center !important;
+    line-height: 7 !important;
+    max-width: 350px !important;
+    border-radius: 15px !important;
+}
+
+.popover-content{
+    padding: 0px 0px !important;
+}
+
+div:last-of-type{
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.badge-notify{
+    background:#26B9B9;
+    position:relative;
+    top: -30px;
+    left: 681px;
+}
+
+.badge{
+    padding: 3px 6px !important;
+}
