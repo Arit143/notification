@@ -23,8 +23,33 @@ class Notification extends CI_Controller {
         $getProcessedNotificationData = $this->notificationlib->processNotificationData($getUnprocessedData);
         $response['allNotification'] = $getProcessedNotificationData;
         if(isset($getProcessedNotificationData)){
-            $response['countNotification'] = count($getProcessedNotificationData);
+            $response['countNotification'] = $this->getCount();
+        }
+        else{
+            $response['countNotification'] = null;
         }
         die(json_encode($response));
+    }
+    
+    private function getCount(){
+        $getCountofNotification = $this->NotificationModel->getNotificationCount();
+        if($getCountofNotification != false){
+            return $getCountofNotification;
+        }
+        else{
+            return false;
+        }
+    }
+
+    public function setStatusRead(){
+        if($this->NotificationModel->setStatusRead()){
+            die(json_encode(true));
+        }
+    }
+
+    public function pushNotification(){
+        $randNumberforNotification = "Notification_Number_".rand(10,1000);
+        $this->NotificationModel->pushNotificationToDatabase($randNumberforNotification);
+        $this->load->view('notification/notificationPush');
     }
 }

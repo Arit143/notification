@@ -1,5 +1,7 @@
 <div>
-    Notification <span>{{countNotifications}}</span>
+    <div class="divBorder">
+        Notification <span class="badge" ng-show="showNotifications">{{countNotifications.countNotify}}</span>
+    </div>
     <div class="divStyle" ng-repeat = "(notification_key,notification_value) in allNotifications">
         <a class="align">
             {{notification_value.notification_message}}

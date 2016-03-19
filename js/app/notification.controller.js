@@ -6,17 +6,52 @@
         .controller('notificationController',notificationController);
 
     notificationController.$inject = ['$http','$scope'];
-    function notificationController($http,$scope) {
+    function notificationController($http,$scope){
 
-        $scope.notificationRead = function () {
-            console.log("Angular Controller Called");
+        /*
+            Initialize $scope variables
+         */
+
+        $scope.showNotifications = true;
+
+        /*
+            Timeout to reload a page as there is no implementation of login
+            Every - 5 mins
+         */
+        setTimeout(function(){
+            window.location.reload(1);
+        }, 300000);
+
+        function init() {
+
             $http({
                 method: 'GET',
                 url: '/notification/getAllNotification'
             }).then(function (response) {
-                console.log(response);
                 $scope.allNotifications = response.data.allNotification;
-                $scope.countNotifications = response.data.countNotification;
+                if(response.data.countNotification != null){
+                    $scope.countNotifications = response.data.countNotification;
+                }
+                else{
+                    $scope.showNotifications = false;
+                }
+
+            })
+        }
+
+        init();
+
+        /*
+            Click Notification
+         */
+        $scope.notificationRead = function () {
+            $scope.showNotifications = false;
+            $http({
+                method: 'GET',
+                url: '/notification/setStatusRead'
+            }).then(function (response) {
+                console.log(response);
+
             })
         }
     }

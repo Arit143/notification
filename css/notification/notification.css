@@ -1,6 +1,5 @@
 .center{
-    position: relative;
-    text-align: center;
+    margin-left: 671px;
     margin-top: 20px;
     color: #AABAC3;
 }
@@ -46,4 +45,5 @@ div:last-of-type{
 
 .badge{
     padding: 3px 6px !important;
+    background:#26B9B9;
 }
