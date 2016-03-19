@@ -2,6 +2,8 @@ CREATE DATABASE wingify;
 
 GRANT ALL ON wingify.* TO ''@'localhost';
 
+USE wingify;
+
 CREATE TABLE IF NOT EXISTS `notification` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `notification_message` varchar(128) DEFAULT NULL,
