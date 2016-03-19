@@ -8,7 +8,7 @@
         <div class="center">
             <span ng-click = "notificationRead()" popover-placement= "bottom" uib-popover-template = "'js/app/views/popover.html'" class = 'fa fa-bell-o'></span>
         </div>
-        <span class="badge badge-notify"><b>3</b></span>
+        <span class="badge badge-notify"><b>{{countNotifications}}</b></span>
     </div>
 </div>
 

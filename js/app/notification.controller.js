@@ -7,20 +7,17 @@
 
     notificationController.$inject = ['$http','$scope'];
     function notificationController($http,$scope) {
-        
-        /*
-            Some JSON
-         */
-
-        $scope.allNotifications = [
-            { message: "Hi You posted"},
-            { message: "Hey he commented"},
-            { message: "Hey he uploaded"}
-        ];
-
 
         $scope.notificationRead = function () {
             console.log("Angular Controller Called");
+            $http({
+                method: 'GET',
+                url: '/notification/getAllNotification'
+            }).then(function (response) {
+                console.log(response);
+                $scope.allNotifications = response.data.allNotification;
+                $scope.countNotifications = response.data.countNotification;
+            })
         }
     }
 })();

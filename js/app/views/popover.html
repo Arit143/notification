@@ -1,8 +1,8 @@
 <div>
-    Notification
-    <div class="divStyle" ng-repeat = "notification in allNotifications">
+    Notification <span>{{countNotifications}}</span>
+    <div class="divStyle" ng-repeat = "(notification_key,notification_value) in allNotifications">
         <a class="align">
-            {{notification.message}}
+            {{notification_value.notification_message}}
         </a>
     </div>
 </div>
