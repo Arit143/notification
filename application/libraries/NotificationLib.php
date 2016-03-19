@@ -23,4 +23,15 @@ class NotificationLib {
 
         return $notificationMessages;
     }
+
+    public function createRandomNotificationsForDB(){
+        $customNotification = array();
+        $randUserName = "User_".rand(1,100);
+        $randNumberforNotification = "has posted with Notification_Number_".rand(10,1000);
+        $imgPath = "img/default_".rand(1,3).".jpg";
+        $customNotification[0] = $randNumberforNotification;
+        $customNotification[1] = $randUserName;
+        $customNotification[2] = $imgPath;
+        return $customNotification;
+    }
 }

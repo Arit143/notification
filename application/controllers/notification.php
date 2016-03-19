@@ -47,7 +47,6 @@ class Notification extends CI_Controller {
             return $getCountofNotification;
         }
     }
-
     /*
      * API to call on clicking the bell notification
      * Sets the is_read flag to 1 for all notifications
@@ -66,8 +65,8 @@ class Notification extends CI_Controller {
      */
 
     public function pushNotification(){
-        $randNumberforNotification = "Notification_Number_".rand(10,1000);
-        $this->NotificationModel->pushNotificationToDatabase($randNumberforNotification);
+        $getCustomNotifications = $this->notificationlib->createRandomNotificationsForDB();
+        $this->NotificationModel->pushNotificationToDatabase($getCustomNotifications[0],$getCustomNotifications[1],$getCustomNotifications[2]);
         $this->load->view('notification/notificationPush');
     }
 }

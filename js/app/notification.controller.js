@@ -11,8 +11,9 @@
         /*
             Initialize $scope variables
          */
-
+        $scope.click = 0;
         $scope.showNotifications = true;
+        $scope.showNotificationCount = true;
 
         /*
             Timeout to reload a page as there is no implementation of login
@@ -31,6 +32,7 @@
                 $scope.allNotifications = response.data.allNotification;
                 if(response.data.countNotification != null){
                     $scope.countNotifications = response.data.countNotification;
+                    $scope.height = (response.data.countNotification * 100);
                 }
                 else{
                     $scope.showNotifications = false;
@@ -46,6 +48,10 @@
          */
         $scope.notificationRead = function () {
             $scope.showNotifications = false;
+            $scope.click++;
+            if($scope.click > 1){
+                $scope.showNotificationCount = false;
+            }
             $http({
                 method: 'GET',
                 url: '/notification/setStatusRead'

@@ -8,7 +8,7 @@ class NotificationModel extends CI_Model{
     }
 
     function getAllNotification(){
-        $notificationQuery = "SELECT notification_message FROM notification";
+        $notificationQuery = "SELECT notification_message,user_name,img_path FROM notification";
         $allNotifications = $this->db->query($notificationQuery);
         if($allNotifications->num_rows() > 0){
             return $allNotifications->result_array();
@@ -30,8 +30,8 @@ class NotificationModel extends CI_Model{
         }
     }
     
-    function pushNotificationToDatabase($randNumberforNotification){
-        $insertNotificationToDatabase = "INSERT INTO notification VALUES (NULL, '$randNumberforNotification', 0)";
+    function pushNotificationToDatabase($randNumberforNotification,$randUserName,$imgPath){
+        $insertNotificationToDatabase = "INSERT INTO notification VALUES (NULL, '$randNumberforNotification', '$randUserName','$imgPath',0)";
         if($this->db->query($insertNotificationToDatabase)){
             return true;
         }

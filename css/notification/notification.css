@@ -9,31 +9,19 @@
 
 .divBorder{
     border-bottom: 1px solid #D0DBE1;
+    height: 82px;
+    line-height: 5;
 }
 
-.divStyle{
-    border-bottom: 1px solid #D0DBE1;
-    width: 344px;
-    height: 100px;
-    margin: auto;
-    background-color: #E9EFF2;
-}
 .popover{
-    top:50px !important;
+    top:70px !important;
     left:510px !important;
-    text-align: center !important;
-    line-height: 7 !important;
     max-width: 350px !important;
-    border-radius: 15px !important;
+    border-radius: 10px !important;
 }
 
 .popover-content{
     padding: 0px 0px !important;
-}
-
-div:last-of-type{
-    border-bottom-left-radius: 15px;
-    border-bottom-right-radius: 15px;
 }
 
 .badge-notify{
@@ -43,7 +31,47 @@ div:last-of-type{
     left: 681px;
 }
 
+.divBorder .badge{
+    padding: 5px 8px !important;
+    background:#26B9B9;
+}
+
 .badge{
     padding: 3px 6px !important;
     background:#26B9B9;
 }
+
+.custom-img-circle{
+    border-radius: 50%;
+    width: 50%;
+    height: 7%;
+}
+
+.blackColor{
+    color: dimgrey;
+}
+
+.notificationTable tr{
+    border-bottom: 1px solid #D0DBE1;
+    background-color: #E9EFF2;
+    line-height: 2.8;
+}
+tr:last-child{
+    border-bottom: hidden;
+}
+
+tr:last-child td:last-child{
+    border-bottom-right-radius: 10px;
+}
+
+tr:last-child td:first-child{
+    border-bottom-left-radius: 10px;
+}
+
+.notifyClass{
+    padding-left: 104px;
+    font-size: 18px;
+}
+
+
+
