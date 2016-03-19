@@ -3,7 +3,17 @@
     margin-top: 20px;
     color: #AABAC3;
 }
+
+.centerBlank{
+    margin-left: 671px;
+    margin-top: 20px;
+    color: #AABAC3;
+}
 .center .fa{
+    font-size: 26px !important;
+}
+
+.centerBlank .fa{
     font-size: 26px !important;
 }
 
@@ -13,15 +23,22 @@
     line-height: 5;
 }
 
-.popover{
+.center .popover{
     top:70px !important;
     left:510px !important;
     max-width: 350px !important;
     border-radius: 10px !important;
 }
 
+.centerBlank .popover{
+    top:70px !important;
+    left:596px !important;
+    max-width: 350px !important;
+    border-radius: 10px !important;
+}
+
 .popover-content{
-    padding: 0px 0px !important;
+    padding: 0 0 !important;
 }
 
 .badge-notify{
@@ -72,6 +89,7 @@ tr:last-child td:first-child{
     padding-left: 104px;
     font-size: 18px;
 }
+
 
 
 

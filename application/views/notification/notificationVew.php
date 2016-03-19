@@ -6,11 +6,18 @@
 <div ng-app = "notification">
     <div  ng-strict-di ng-controller = "notificationController as notifyCtrl">
         <div class="center">
-            <span style = "cursor: pointer" ng-click = "notificationRead()"
+            <span ng-show = "popover"
+                  style = "cursor: pointer" ng-click = "notificationRead()"
                   popover-trigger="outsideClick"
                   popover-placement= "bottom" uib-popover-template = "'js/app/views/popover.html'" class = 'fa fa-bell-o'></span>
         </div>
         <span ng-show = "showNotifications" class="badge badge-notify"><b>{{countNotifications.countNotify}}</b></span>
+        <div class="centerBlank">
+            <span ng-show = "popoverBlank"
+                  style = "cursor: pointer"
+                  popover-trigger="outsideClick"
+                  popover-placement= "bottom" uib-popover-template = "'js/app/views/popoverBlank.html'" class = 'fa fa-bell-o'></span>
+        </div>
     </div>
 </div>
 

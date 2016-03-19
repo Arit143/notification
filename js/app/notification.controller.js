@@ -14,6 +14,8 @@
         $scope.click = 0;
         $scope.showNotifications = true;
         $scope.showNotificationCount = true;
+        $scope.popover = true;
+        $scope.popoverBlank = false;
 
         /*
             Timeout to reload a page as there is no implementation of login
@@ -29,7 +31,14 @@
                 method: 'GET',
                 url: '/notification/getAllNotification'
             }).then(function (response) {
-                $scope.allNotifications = response.data.allNotification;
+                if(!($.isEmptyObject(response.data.allNotification))){
+                    $scope.allNotifications = response.data.allNotification;
+                }
+                else{
+                    $scope.popover = false;
+                    $scope.popoverBlank = true;
+                }
+
                 if(response.data.countNotification != null){
                     $scope.countNotifications = response.data.countNotification;
                     $scope.height = (response.data.countNotification * 100);
@@ -45,6 +54,7 @@
 
         /*
             Click Notification
+            Method - Can be both GET and POST as it is just an update to set a flag
          */
         $scope.notificationRead = function () {
             $scope.showNotifications = false;
@@ -56,8 +66,9 @@
                 method: 'GET',
                 url: '/notification/setStatusRead'
             }).then(function (response) {
-                console.log(response);
-
+                /*
+                    TODO
+                 */
             })
         }
     }
