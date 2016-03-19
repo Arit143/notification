@@ -18,11 +18,8 @@ class NotificationModel extends CI_Model{
     function getNotificationCount(){
         $notificationCountQuery = "SELECT COUNT(id) as countNotify FROM notification WHERE is_read = 0";
         $notReadNotificationCount = $this->db->query($notificationCountQuery);
-        if($notReadNotificationCount->num_rows() > 0){
+        if($notReadNotificationCount->num_rows() > 0) {
             return $notReadNotificationCount->row();
-        }
-        else{
-            return false;
         }
     }
 
