@@ -11,7 +11,7 @@ You need to/can download WAMP OR XAMP according to your choice.
 For WAMPSERVER 2.5
 ****
 1. You can find the WAMP server download link here -> http://www.wampserver.com/en/ 
-2. You can either extract the ZIP or git clone in any path you want.
+2. Either extract the code ZIP or git clone in any path you want.
 
 HTTPD.CONF CHANGES
 ****
