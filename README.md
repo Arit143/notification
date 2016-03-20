@@ -10,9 +10,9 @@ You need to/can download WAMP OR XAMP according to your choice.
 
 For WAMPSERVER 2.5
 ****
-You can either extract the ZIP or git clone in /www directory in WAMP
+1. You can either extract the ZIP or git clone in any path you want.
 
-HTTPD CHANGES
+HTTPD.CONF CHANGES
 ****
 
 * You can find httpd.conf in the folder where apache is installed. In my case it is "C:\wamp\bin\apache\apache2.4.9\conf\" as my wamp is installed in C: Drive.
