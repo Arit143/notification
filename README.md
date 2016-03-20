@@ -5,17 +5,20 @@
 * APACHE
 * PHP
 * MYSQL
+
 You need to/can download WAMP OR XAMP according to your choice.
 
 For WAMPSERVER 2.5
-
+****
 You can either extract the ZIP or git clone in /www directory in WAMP
 
-OR
+HTTPD CHANGES
+****
 
-Find all "/var/www" in httpd.conf in WAMP and point it to the path wherever this project exists.
-You can find httpd.conf in the folder where apache is installed.
-In my case it is "C:\wamp\bin\apache\apache2.4.9\conf\" as my wamp is installed in C: Drive.
+* You can find httpd.conf in the folder where apache is installed. In my case it is "C:\wamp\bin\apache\apache2.4.9\conf\" as my wamp is installed in C: Drive.
+* Find all "/var/www" in httpd.conf in WAMP and point it to the path wherever this project exists. 
+* Uncomment LoadModule rewrite_module modules/mod_rewrite.so in httpd.conf to enable Rewrite engine in .htaccess
+
 
 ###CODEIGNITER CONFIG
 
