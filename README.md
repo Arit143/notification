@@ -18,9 +18,10 @@ You can find httpd.conf in the folder where apache is installed.
 In my case it is "C:\wamp\bin\apache\apache2.4.9\conf\" as my wamp is installed in C: Drive.
 
 ###CODEIGNITER CONFIG
-.htaccess -> Changed to remove index.php from the URL
-config.php -> Changed 'index_page' config parameter to null
-database.php -> Changed $db['default']['database'] to 'wingify'
+
+1. .htaccess -> Changed to remove index.php from the URL
+2. config.php -> Changed 'index_page' config parameter to null
+3. database.php -> Changed $db['default']['database'] to 'wingify'
 
 ###DATABASE RELATED CHANGES
 
@@ -50,17 +51,23 @@ There are two main URLS
 ###CODE STRUCTURE
 
 BACKEND - CODEIGNITER 2.2.6
+****
+
 1. MVC codes(Can be found under /application folder)
 2. Custom Library for processing data(Can be found under /application/libraries)
 
 FRONTEND- ANGULARJS
-All js files can be obtained under /js/app folder
-/js/app/views contains "popover" html.
-angular-ui is used for popover.
+****
+
+1. All js files can be obtained under /js/app folder
+2. /js/app/views contains "popover" html.
+3. angular-ui is used for popover.
 
 CSS and IMAGES
-All custom css and img files are found under /css and /img respectively.
-For bootstrap and fontawesome css , the css are present in /bower_components.
+****
+
+1. All custom css and img files are found under /css and /img respectively.
+2. For bootstrap and fontawesome css , the css are present in /bower_components.
 
 ###FUNCTIONALITY
 
