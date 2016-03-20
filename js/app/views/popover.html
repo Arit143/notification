@@ -6,7 +6,7 @@
     </div>
     <table class="notificationTable" style="width: 100%;">
         <tr ng-repeat = "(notification_key,notification_value) in allNotifications">
-            <td width="30%" height="30%" align="center"><img class="custom-img-circle" src= {{notification_value.img_path}}></td>
+            <td width="30%" height="30%" align="center"><img class="custom-img-circle" ng-src= "{{notification_value.img_path}}"></td>
             <td width="70%" class="blackColor"><b>{{notification_value.user_name}}</b> {{notification_value.notification_message}}</td>
         </tr>
     </table>
