@@ -1,4 +1,4 @@
-#Wingify! Notifications
+# Notifications
 
 ###WHAT IT NEEDS TO RUN
 
